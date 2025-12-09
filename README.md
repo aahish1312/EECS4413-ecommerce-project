@@ -1,17 +1,35 @@
 # EECS4413-ecommerce-project
 
-Full-stack e-commerce site for EECS4413 (Building E-commerce Systems).
+Full-stack e-commerce site for **EECS 4413 – Building E-Commerce Systems**.
 
-## Running the Project
+The codebase has two main parts:
+
+- `backend/` – Node.js + Express API using **Prisma** and a database  
+- `frontend/` – React (Vite) single-page app that talks to the backend  
+
+---
+
+## 1. Clone the repository
 
 ```bash
-# Start the backend
-cd backend
-npm install       # install backend dependencies
-npm run dev       # start backend server
+git clone https://github.com/farhan-a3/EECS4413-ecommerce-project.git
+cd EECS4413-ecommerce-project
+```
 
-# Start the frontend
-cd ../frontend
-npm install       # install frontend dependencies
-npm run dev       # start frontend server
+## 2. Set up and run the backend
+
+```bash
+cd backend
+npm install
+npx prisma generate
+npm run dev   # keep this running
+```
+
+## 3. Set up and run the frontend
+
+Open a new terminal, then from the project root:
+```bash
+cd frontend
+npm install
+npm run dev
 ```
