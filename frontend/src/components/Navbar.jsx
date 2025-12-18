@@ -33,8 +33,8 @@ const Navbar = () => {
         <button
           className="navbar-toggler mx-2"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -75,26 +75,26 @@ const Navbar = () => {
                   type="button"
                   onClick={handleLogout}
                 >
-                  <i className="fa fa-sign-out mr-1"></i> Logout
+                  <i className="fa fa-sign-out me-1"></i> Logout
                 </button>
               </>
             ) : (
               <>
                 <NavLink to="/login" className="btn btn-outline-dark m-2">
-                  <i className="fa fa-sign-in mr-1"></i> Login
+                  <i className="fa fa-sign-in me-1"></i> Login
                 </NavLink>
                 <NavLink to="/register" className="btn btn-outline-dark m-2">
-                  <i className="fa fa-user-plus mr-1"></i> Register
+                  <i className="fa fa-user-plus me-1"></i> Register
                 </NavLink>
               </>
             )}
 
             <NavLink to="/admin-login" className="btn btn-outline-dark m-2">
-              <i className="fa fa-sign-in mr-1"></i> Admin
+              <i className="fa fa-sign-in me-1"></i> Admin
             </NavLink>
 
             <NavLink to="/cart" className="btn btn-outline-dark m-2">
-              <i className="fa fa-shopping-cart mr-1"></i> Cart ({state.length})
+              <i className="fa fa-shopping-cart me-1"></i> Cart ({state.length})
             </NavLink>
           </div>
         </div>

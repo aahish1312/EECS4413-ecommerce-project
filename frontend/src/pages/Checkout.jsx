@@ -119,7 +119,7 @@ const Checkout = () => {
                   <h4 className="mb-0">Billing address</h4>
                 </div>
                 <div className="card-body">
-                  <form className="needs-validation" novalidate onSubmit={handleSubmit}>
+                  <form className="needs-validation" noValidate onSubmit={handleSubmit}>
                     <div className="row g-3">
                       <div className="col-sm-6 my-1">
                         <label htmlFor="firstName" className="form-label">

@@ -129,7 +129,7 @@ const Cart = () => {
                       </li>
                     </ul>
 
-                    <Link to="/checkout" className="btn btn-dark btn-lg btn-block">
+                    <Link to="/checkout" className="btn btn-dark btn-lg w-100">
                       Go to checkout
                     </Link>
                   </div>
