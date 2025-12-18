@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navbar, Footer } from "../components";
 import { useNavigate } from 'react-router-dom';
+
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('sales'); // 'sales', 'inventory', 'customers'
   const [orders, setOrders] = useState([]);
@@ -19,11 +20,7 @@ const AdminDashboard = () => {
     }
   }, [navigate]);
 
-
-
-
   useEffect(() => {
-    
     fetch("http://localhost:5000/api/admin/orders").then(res => res.json()).then(setOrders);
     fetch("http://localhost:5000/api/products").then(res => res.json()).then(setProducts);
     fetch("http://localhost:5000/api/admin/users").then(res => res.json()).then(setUsers);

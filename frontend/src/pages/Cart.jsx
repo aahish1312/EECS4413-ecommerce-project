@@ -40,6 +40,7 @@ const Cart = () => {
     state.map((item) => {
       return (totalItems += item.qty);
     });
+
     return (
       <>
         <section className="h-100 gradient-custom">
@@ -56,10 +57,7 @@ const Cart = () => {
                         <div key={item.id}>
                           <div className="row d-flex align-items-center">
                             <div className="col-lg-3 col-md-12">
-                              <div
-                                className="bg-image rounded"
-                                data-mdb-ripple-color="light"
-                              >
+                              <div className="bg-image rounded" data-mdb-ripple-color="light">
                                 <img
                                   src={item.image}
                                   // className="w-100"
@@ -79,27 +77,15 @@ const Cart = () => {
                             </div>
 
                             <div className="col-lg-4 col-md-6">
-                              <div
-                                className="d-flex mb-4"
-                                style={{ maxWidth: "300px" }}
-                              >
-                                <button
-                                  className="btn px-3"
-                                  onClick={() => {
-                                    removeItem(item);
-                                  }}
-                                > -                                  <i className="fas fa-minus"> </i>
+                              <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
+                                <button className="btn px-3" onClick={() => removeItem(item)} aria-label="Decrease quantity">
+                                  <i className="fa fa-minus" aria-hidden="true"></i>
                                 </button>
 
                                 <p className="mx-5">{item.qty}</p>
-
-                                <button
-                                  className="btn px-3"
-                                  onClick={() => {
-                                    addItem(item);
-                                  }}
-                                > +
-                                  <i className="fas fa-plus"></i>
+                                
+                                <button className="btn px-3" onClick={() => addItem(item)} aria-label="Increase quantity">
+                                  <i className="fa fa-plus" aria-hidden="true"></i>
                                 </button>
                               </div>
 
@@ -143,10 +129,7 @@ const Cart = () => {
                       </li>
                     </ul>
 
-                    <Link
-                      to="/checkout"
-                      className="btn btn-dark btn-lg btn-block"
-                    >
+                    <Link to="/checkout" className="btn btn-dark btn-lg btn-block">
                       Go to checkout
                     </Link>
                   </div>
